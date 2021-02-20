@@ -1,0 +1,57 @@
+---
+title: Plugin options
+---
+
+doctornpm has several configuration options.  You can configure them in
+the `plugin` configuration in your `gatsby-config.js`.  These options are:
+
+* Site favicon
+
+   ```javascript
+   icon: './src/images/favicon.png',
+   ```
+
+   The favicon for your site.  (An on-disk path to a PNG.)
+
+* Links to edit this page on GitHub
+
+   ```javascript
+   editOnGitHub: true
+   ```
+
+   Whether the "Edit on GitHub" links should be present on content pages.
+   If true, a link to edit the current page will be present, based on the
+   given GitHub repository, branch and page.
+
+   (Default: **`true`**.)
+
+* Show GitHub contributors
+
+  ```javascript
+  showContributors: true
+  ```
+
+  Whether the contributors to this page will be shown.  If true, people
+  who have contributed changes to this page will be shown.
+
+  (Default: **`true`**.)
+
+* GitHub repository information
+
+  ```javascript
+  repo: {
+    url: 'https://github.com/npm/doctornpm',
+    defaultBranch: 'main',
+  },
+  ```
+
+  The GitHub repository URL and the default branch.  If set, the
+  links to edit on GitHub will be based on these values.
+
+* Gatsby prefix path
+
+  ```javascript
+  pathPrefix: process.env.PATH_PREFIX || ''
+  ```
+
+  The Gatsby path prefix for this site's publish.

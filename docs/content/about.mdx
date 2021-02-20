@@ -1,0 +1,43 @@
+---
+title: About doctornpm
+---
+
+doctornpm is a gatsby theme based on the very fine
+[doctocat](https://primer.style/doctocat) theme, which is part
+of [Primer](https://primer.style/), GitHub's design system.
+
+It's been modified to add some of the look and feel of
+[npm](https://npmjs.com/), and includes a number of pieces of
+functionality to support the npm documentation:
+
+* Expanding navigation sidebar
+  There's a lot of pages on the npm documentation site!  The navigation
+  sidebar will only expand to the section that you're in, and will only
+  show the top-level navigation elements for everything else.  This
+  should try to keep from overwhelming you.
+
+* "Variants" in navigation
+  In order to support multiple versions of the CLI documentation
+  (since npm v6 and npm v7 are both in frequent use) we've added
+  what we call "variants" in the navigation hierarchy, so that you
+  can view the npm v6 docs _or_ the npm v7 docs.
+
+* "slug" is configurable
+  The slug (the resulting page name or URL) is configurable in a
+  document's frontmatter.  This may be helpful for sites that have
+  a "legacy" URL layout.
+
+* GitHub repository, branch and file path are configurable
+  For "Edit this page on GitHub" links, the repository, branch and
+  file path are all configurable.  This may be helpful for sites
+  that spread their documentation across multiple repositories.
+  (In particular, the npm registry documentation lives in one
+  repository and the npm CLI documentation lives with the CLI
+  itself.
+
+* Make GitHub integration optional
+  Although we definitely want to display the contributors list and
+  an "Edit on GitHub link", we needed to publish the new
+  [docs.npmjs.com](https://docs.npmjs.com/) before we had finalized
+  updating the documentation in the CLI.  As a result, we didn't want
+  to link people to the wrong places, so we added an opt-out.

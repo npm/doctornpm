@@ -1,0 +1,24 @@
+{
+  "name": "doctornpm-example",
+  "repository": {
+    "url": "https://github.com/npm/doctornpm",
+    "directory": "example"
+  },
+  "version": "1.3.0",
+  "private": true,
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "build-prefix-paths": "gatsby build --prefix-paths",
+    "now-build": "npm run build",
+    "serve": "gatsby serve",
+    "serve-prefix-paths": "gatsby serve --prefix-paths"
+  },
+  "dependencies": {
+    "gatsby": "^2.32.3",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-theme-doctornpm": "file:../gatsby-theme-doctornpm",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

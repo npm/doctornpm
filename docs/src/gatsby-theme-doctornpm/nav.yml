@@ -1,0 +1,23 @@
+- title: About doctornpm
+  url: /about
+- title: Using doctornpm
+  url: /using
+- title: Configuration
+  url: /configuration
+  children:
+  - title: Plugin options
+    url: /configuration/plugin
+    description: Options for the doctornpm theme
+  - title: Navigation
+    url: /configuration/navigation
+    description: Configuring the navigation hierarchy
+  - title: Header links
+    url: /configuration/header-links
+    description: Configuring the links in the header
+- title: Components
+  url: /components
+  children:
+  - title: Index
+    url: /components/index-component
+  - title: VariantSelect
+    url: /components/variant-select

@@ -1,0 +1,28 @@
+---
+title: VariantSelect component
+---
+
+The `VariantSelect` component gives you a selection dropdown
+component for a page's variants.
+
+<Screenshot src="/components/variant-select.png" alt="Screenshot of the variant select component" />
+
+Options:
+
+In addition to the [Dropdown
+options](https://styleguide.github.com/primer/components/dropdown/),
+the following options are:
+
+* `root`: the path to the variant's root
+* `location`: the current page's path
+
+Example:
+
+```html
+<VariantSelect
+   overlay={true}
+   direction="se"
+   menuWidth="min(30ch, 500px)"
+   root="/app/version-two"
+   location="/app-version-two/usage" />
+```

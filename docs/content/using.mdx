@@ -1,0 +1,47 @@
+---
+title: Using doctornpm
+---
+
+To use doctornpm, first install it:
+
+```
+npm install gatsby-theme-doctornpm
+```
+
+Next, include it in your `gatsby-config.js`, in the `plugins` section:
+
+```javascript
+plugins: [
+  {
+    resolve: 'gatsby-theme-doctornpm',
+  }
+],
+```
+
+## Configuration
+
+doctornpm has several [configuration options](/configuration).
+You can configure them in the `plugin` configuration in your
+`gatsby-config.js`.
+
+For example:
+
+```javascript
+plugins: [
+  {
+    resolve: 'gatsby-theme-doctornpm',
+    options: {
+      icon: './src/images/favicon.png',
+      editOnGitHub: true,
+      showContributors: true,
+      repo: {
+        url: 'https://github.com/npm/doctornpm',
+        defaultBranch: 'main',
+      },
+    }
+  }
+],
+```
+
+See the [plugin options](/configuration/plugin) documentation for more 
+information on these values.

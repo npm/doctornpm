@@ -1,0 +1,88 @@
+---
+title: Navigation configuration
+---
+
+The page navigation on the sidebar is controlled by a YAML configuration
+file, `src/gatsby-theme-doctornpm/nav.yml`.
+
+## Pages
+
+Pages are defined with a `title` and a `url` property.  `title` is the
+name to display in the navigation, and `url` is the destination of the link.
+
+Pages may optionally include a `shortName` property, which will be used
+instead of the `title` when space is at a premium (such as in a breadcrumb
+trail).  They may also include a `description` property, which will be
+shown on automatically generated index pages.
+
+## Sections
+
+A hierarchy is formed with sections.  Sections extend the definition in
+a page (meaning they have a `title` and a `url`) but also have `children`,
+which is an array of other pages or sections.
+
+## Variants
+
+Variants are similar pages or sections that should be represented as an
+option for display.  For example, you may want to present multiple different
+versions of documentation and let the user select a single version to
+show in the navigation.
+
+The navigation hierarchy will only display the pages and sections for
+one individual variant at a time to reduce clutter and hierarchy depth.
+
+If you're currently viewing a page within a variant, that variant's
+hierarchy will be shown.  Otherwise, the default variant's hierarchy
+will be shown.
+
+Each variant may have the same pages, but does not need to.
+
+In the example below, if you're viewing `/app/version-two/commands`
+then the `version-two` variant will be shown.  Otherwise, the
+`version-three` navigation will be shown, since it's the default.
+
+## Example
+
+```yaml
+# This is a single page in the navigation
+- title: Single page
+  url: /single-page
+
+# This is a section with three pages.
+- title: Getting started
+  url: /getting-started
+  children:
+  - title: Page one
+    url: /getting-started/page-one
+  - title: Page two
+    url: /getting-started/page-two
+  - title: Page three
+    url: /getting-started/page-three
+
+# This gives two variants for the app
+# documentation, version two and version
+# three.
+- title: Application
+  shortName: app
+  url: /app
+  variants:
+  - title: Version 2.x
+    url: /app/version-two
+    children:
+    - title: Installing
+      url: /app/version-two/install
+      description: Installing
+    - title: Usage
+      url: /app/version-two/usage
+      description: Usage of v2
+  - title: Version 3.x
+    url: /app/version-three
+    default: true
+    children:
+    - title: Installing
+      url: /app/version-three/install
+      description: Installing the app
+    - title: Command line
+      url: /app/version-three/usage
+      description: Command-line usage
+```

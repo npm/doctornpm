@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "develop": "cd docs && npm run develop",
+    "build": "cd docs && npm run build",
+    "build-prefix-paths": "cd docs && npm run build-prefix-paths",
+    "serve": "cd docs && npm run serve",
+    "serve-prefix-paths": "cd docs && npm run serve-prefix-paths"
+  },
+  "workspaces": [
+    "gatsby-theme-doctornpm",
+    "docs"
+  ]
+}
