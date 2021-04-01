@@ -4,14 +4,14 @@
     "url": "npm/gatsby-theme-doctornpm",
     "directory": "gatsby-theme-doctornpm"
   },
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "jest"
   },
   "devDependencies": {
-    "gatsby": "^2.24.65",
+    "gatsby": "^2.32.11",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

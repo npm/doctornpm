@@ -4,7 +4,7 @@
     "url": "https://github.com/npm/doctornpm",
     "directory": "example"
   },
-  "version": "1.6.0",
+  "version": "1.7.0",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
@@ -15,7 +15,7 @@
     "serve-prefix-paths": "gatsby serve --prefix-paths"
   },
   "dependencies": {
-    "gatsby": "^2.32.3",
+    "gatsby": "^2.32.11",
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-theme-doctornpm": "file:../gatsby-theme-doctornpm",
     "react": "^16.14.0",
