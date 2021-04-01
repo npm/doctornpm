@@ -4,7 +4,7 @@
     "url": "https://github.com/npm/doctornpm",
     "directory": "example"
   },
-  "version": "1.3.0",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
