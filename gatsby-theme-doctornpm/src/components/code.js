@@ -14,7 +14,7 @@ function Code({className, children, live, noinline}) {
   if (live) {
     return <LiveCode code={code} language={language} noinline={noinline} />
   }
-  
+
   return (
     <Relative
     onMouseEnter={() => setIsMouseOverBlock(true)}
