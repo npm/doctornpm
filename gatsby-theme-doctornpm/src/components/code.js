@@ -1,11 +1,13 @@
 import {Absolute, BorderBox, Relative, Text} from '@primer/components'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import githubTheme from 'prism-react-renderer/themes/github'
-import React from 'react'
+import React, {useState} from 'react'
 import ClipboardCopy from './clipboard-copy'
 import LiveCode from './live-code'
 
 function Code({className, children, live, noinline}) {
+  const [isMouseOverBlock, setIsMouseOverBlock] = useState(false)
+
   const language = className ? className.replace(/language-/, '') : ''
   const code = children.trim()
 
@@ -14,8 +16,11 @@ function Code({className, children, live, noinline}) {
   }
 
   return (
-    <Relative>
-      <Absolute top={0} right={0} p={2}>
+    <Relative
+    onMouseEnter={() => setIsMouseOverBlock(true)}
+    onMouseLeave={() => setIsMouseOverBlock(false)}
+    >
+      <Absolute style={isMouseOverBlock ? {} : { display: 'none' }} top={0} right={0} p={2}>
         <ClipboardCopy value={code} />
       </Absolute>
       <Highlight
