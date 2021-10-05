@@ -4,7 +4,7 @@
     "url": "npm/gatsby-theme-doctornpm",
     "directory": "gatsby-theme-doctornpm"
   },
-  "version": "1.7.0",
+  "version": "1.8.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
