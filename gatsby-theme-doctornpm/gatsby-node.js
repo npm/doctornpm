@@ -16,6 +16,7 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
       github_repo: String,
       github_branch: String,
       github_path: String,
+      edit_on_github: Boolean,
       slug: String,
       redirect_from: [String]
     }
@@ -42,6 +43,7 @@ exports.createPages = async ({graphql, actions}, themeOptions) => {
             github_repo
             github_branch
             github_path
+            edit_on_github
             slug
             redirect_from
           }
@@ -167,12 +169,11 @@ function getGitHubData(repo, overrideData, filePath) {
 }
 
 function getEditUrl(themeOptions, repo, filePath, overrideData = { }) {
-  const gh = getGitHubData(repo, overrideData, filePath);
-
-  if (!gh || themeOptions.editOnGitHub === false) {
-    return null;
+  if (themeOptions.editOnGitHub === false || overrideData.edit_on_github === false) {
+    return null
   }
 
+  const gh = getGitHubData(repo, overrideData, filePath);
   return `https://github.com/${gh.nwo}/edit/${gh.branch}/${gh.path}`
 }
 

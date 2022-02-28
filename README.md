@@ -20,10 +20,10 @@ the theme, so that you can view and validate the changes that you're making.)
 ## Prerequisites
 
 Prerequisites: [Node.js](https://nodejs.org/en/) (LTS) and
-[npm 7](https://github.com/npm/cli).
+[npm 8](https://github.com/npm/cli).
 
-**npm 7 is a requirement** since this repository uses workspaces.
-If you don't have npm 7 yet, you can `npm install -g npm@latest`.
+**npm 8 is a requirement** since this repository uses workspaces.
+If you don't have npm 8 yet, you can `npm install -g npm@latest`.
 
 ## Getting Started
 
@@ -32,4 +32,10 @@ If you don't have npm 7 yet, you can `npm install -g npm@latest`.
 3. `npm run develop` to build the site and start a local webserver.
 4. Visit the documentation site in your local instance,
    http://localhost:8000/
+
+## Publishing
+
+The documentation for the theme is published to the `gh-pages` branch
+via a [GitHub action](.github/workflows/publish.yml).
+It lives at [npm.github.io/doctornpm](https://npm.github.io/doctornpm/).
 

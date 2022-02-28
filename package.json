@@ -1,11 +1,15 @@
 {
+  "name": "doctornpm",
   "private": true,
+  "repository": {
+    "url": "https://github.com/npm/doctornpm",
+    "directory": "gatsby-theme-doctornpm"
+  },
   "scripts": {
-    "develop": "cd docs && npm run develop",
-    "build": "cd docs && npm run build",
-    "build-prefix-paths": "cd docs && npm run build-prefix-paths",
-    "serve": "cd docs && npm run serve",
-    "serve-prefix-paths": "cd docs && npm run serve-prefix-paths"
+    "develop": "npm run develop -w docs",
+    "build": "npm run build -w docs",
+    "serve": "npm run serve -w docs",
+    "test": "npm test -w gatsby-theme-doctornpm"
   },
   "workspaces": [
     "gatsby-theme-doctornpm",
