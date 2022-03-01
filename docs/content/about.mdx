@@ -22,18 +22,25 @@ functionality to support the npm documentation:
   what we call "variants" in the navigation hierarchy, so that you
   can view the npm v6 docs _or_ the npm v7 docs.
 
-* "slug" is configurable
+* `slug` is configurable
   The slug (the resulting page name or URL) is configurable in a
   document's frontmatter.  This may be helpful for sites that have
   a "legacy" URL layout.
 
-* GitHub repository, branch and file path are configurable
-  For "Edit this page on GitHub" links, the repository, branch and
-  file path are all configurable.  This may be helpful for sites
-  that spread their documentation across multiple repositories.
-  (In particular, the npm registry documentation lives in one
-  repository and the npm CLI documentation lives with the CLI
-  itself.
+* GitHub repository, branch, file path, and the option are configurable
+  for "Edit this page on GitHub" on a per-page basis using frontmatter.
+  This may be helpful for sites that spread their documentation across
+  multiple repositories.  (In particular, the npm registry documentation
+  lives in one repository and the npm CLI documentation lives with the CLI
+  itself.)
+
+  ```yaml
+  ---
+  github_repo: ''
+  github_branch: ''
+  github_path: ''
+  ---
+  ```
 
 * Make GitHub integration optional
   Although we definitely want to display the contributors list and
@@ -41,3 +48,6 @@ functionality to support the npm documentation:
   [docs.npmjs.com](https://docs.npmjs.com/) before we had finalized
   updating the documentation in the CLI.  As a result, we didn't want
   to link people to the wrong places, so we added an opt-out.
+
+  This can be controlled globally using `editOnGitHub` in the plugin's
+  config, or on a per-page basis with the `edit_on_github` frontmatter.

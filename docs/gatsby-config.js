@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'doctornpm',
@@ -11,14 +13,16 @@ module.exports = {
       resolve: 'gatsby-theme-doctornpm',
       options: {
         icon: './src/images/npm-favicon.png',
-        editOnGitHub: false,
+        editOnGitHub: true,
         showContributors: false,
+        showSidebarEditLink: true,
         repo: {
           url: 'https://github.com/npm/doctornpm',
           defaultBranch: 'main',
+          path: 'docs'
         }
       },
     }
   ],
-  pathPrefix: process.env.PATH_PREFIX || ''
+  pathPrefix: process.env.PREFIX_PATHS ? path.basename(require('../package.json').repository.url) : '',
 }

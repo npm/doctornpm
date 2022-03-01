@@ -20,12 +20,12 @@ jobs:
         path: 'docs/public'
 
     - name: Use Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
-        node-version: 12.x
+        node-version: 16.x
 
-    # Update npm to v7
-    - name: Update npm v7
+    # Update npm to latest
+    - name: Update npm to latest
       run: npm install -g npm@latest
 
     # Build the site
@@ -34,6 +34,7 @@ jobs:
     - name: Build documentation
       run: npm run build
       env:
+        PREFIX_PATHS: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Check for changes; this avoids publishing a new change to the

@@ -52,7 +52,13 @@ function Layout({children, pageContext, location}) {
         <Header location={location} isSearchEnabled={pageContext.isSearchEnabled} />
         <Flex flex="1 1 auto" flexDirection="row" css={{zIndex: 0}}>
           <Box display={['none', null, null, 'block']}>
-            <Sidebar editOnGitHub={pageContext.themeOptions.editOnGitHub} location={location} />
+            <Sidebar
+              editOnGitHub={
+                pageContext.themeOptions.showSidebarEditLink &&
+                pageContext.themeOptions.editOnGitHub
+              }
+              location={location}
+            />
           </Box>
           <Grid
             id="skip-nav"
