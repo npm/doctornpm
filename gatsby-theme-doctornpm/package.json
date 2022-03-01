@@ -12,6 +12,7 @@
   },
   "files": [
     "src",
+    "!src/**/__tests__/",
     "gatsby-*.js",
     "index.js"
   ],
