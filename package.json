@@ -9,6 +9,7 @@
     "develop": "npm run develop -w docs",
     "build": "npm run build -w docs",
     "serve": "npm run serve -w docs",
+    "clean": "npm run clean -w docs",
     "test": "npm test -w gatsby-theme-doctornpm"
   },
   "workspaces": [
