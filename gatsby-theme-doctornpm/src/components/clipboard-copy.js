@@ -1,5 +1,5 @@
 import {Button, StyledOcticon} from '@primer/components'
-import {CheckIcon, ClippyIcon} from '@primer/octicons-react'
+import {CheckIcon, CopyIcon} from '@primer/octicons-react'
 import copy from 'copy-to-clipboard'
 import React from 'react'
 
@@ -22,7 +22,7 @@ function ClipboardCopy({value}) {
         setCopied(true)
       }}
     >
-      {copied ? <StyledOcticon icon={CheckIcon} color="green.5" /> : <StyledOcticon icon={ClippyIcon} color="gray.7" />}
+      {copied ? <StyledOcticon icon={CheckIcon} color="green.5" /> : <StyledOcticon icon={CopyIcon} color="gray.7" />}
     </Button>
   )
 }
