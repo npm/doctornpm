@@ -21,7 +21,8 @@ module.exports = {
           url: 'https://github.com/npm/doctornpm',
           defaultBranch: 'main',
           path: 'docs'
-        }
+        },
+        defer: true
       },
     }
   ],
