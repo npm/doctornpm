@@ -3,7 +3,6 @@ const path = require('path')
 module.exports = (themeOptions) => {
   return {
     siteMetadata: {
-      trailingSlash: "always",
       title: 'doctornpm',
       shortName: 'doctornpm',
       description: 'A Gatsby theme for creating npm-flavored Primer documentation sites',

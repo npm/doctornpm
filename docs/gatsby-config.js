@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  trailingSlash: "always",
+  trailingSlash: "never",
   siteMetadata: {
     title: 'doctornpm',
     shortName: 'doctornpm',
