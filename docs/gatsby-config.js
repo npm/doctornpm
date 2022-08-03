@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  trailingSlash: "never",
   siteMetadata: {
     title: 'doctornpm',
     shortName: 'doctornpm',
@@ -20,7 +21,8 @@ module.exports = {
           url: 'https://github.com/npm/doctornpm',
           defaultBranch: 'main',
           path: 'docs'
-        }
+        },
+        defer: true
       },
     }
   ],

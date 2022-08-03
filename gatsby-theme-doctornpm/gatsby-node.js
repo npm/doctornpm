@@ -29,6 +29,7 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
 exports.createPages = async ({graphql, actions}, themeOptions) => {
   const repo = themeOptions.repo ? themeOptions.repo : { url: getPkgRepo(readPkgUp.sync().package).browse() };
 
+
   const {data} = await graphql(`
     {
       allMdx {
@@ -95,6 +96,7 @@ exports.createPages = async ({graphql, actions}, themeOptions) => {
           contributors,
           tableOfContents: node.tableOfContents,
         },
+        defer: themeOptions.defer ?  themeOptions.defer : false
       })
 
       if (node.frontmatter.redirect_from) {

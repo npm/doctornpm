@@ -1,6 +1,5 @@
 import {graphql, useStaticQuery} from 'gatsby'
 import React from 'react'
-import SearchWorker from 'worker-loader!./search.worker.js'
 
 function useSearch(query) {
   const latestQuery = React.useRef(query)
@@ -20,9 +19,7 @@ function useSearch(query) {
       allSitePage {
         nodes {
           path
-          context {
-            mdxId
-          }
+          pageContext
         }
       }
     }
@@ -33,12 +30,13 @@ function useSearch(query) {
     return map;
   }, { });
 
+  
   const list = React.useMemo(
     () =>
-      data.allSitePage.nodes.filter(node => {
-        return (node.context && node.context.mdxId && mdxNodes[node.context.mdxId] != null);
+    data.allSitePage.nodes.filter(node => {
+        return (node.pageContext && node.pageContext.mdxId && mdxNodes[node.pageContext.mdxId] != null);
       }).map(node => {
-        const mdxNode = mdxNodes[node.context.mdxId];
+        const mdxNode = mdxNodes[node.pageContext.mdxId];
 
         const obj =
         {
@@ -60,7 +58,7 @@ function useSearch(query) {
   }, [])
 
   React.useEffect(() => {
-    const worker = new SearchWorker()
+    const worker = new Worker(new URL('./search.worker.js', import.meta.url));
     worker.addEventListener('message', handleSearchResults)
     worker.postMessage({list})
     workerRef.current = worker

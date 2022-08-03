@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   return {
     siteMetadata: {
       title: 'doctornpm',
@@ -13,7 +13,6 @@ module.exports = themeOptions => {
     plugins: [
       'gatsby-plugin-styled-components',
       'gatsby-plugin-react-helmet',
-      'gatsby-plugin-remove-trailing-slashes',
       'gatsby-plugin-catch-links',
       'gatsby-transformer-yaml',
       {
