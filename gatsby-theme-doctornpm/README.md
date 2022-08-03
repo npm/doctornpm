@@ -45,5 +45,5 @@ module.exports = {
 | showContributors       | yes      | n/a     | boolean   | Determines if the repository contributors are displayed                        |
 | showSidebarEditLink    | yes      | n/a     | boolean   | Determines if the "Edit this page on GitHub" link is displayed in the SideBar  |
 | repo                   | yes      | n/a     | object    | `url`, `defaultBranch` and `path` to repository                                |
-| defer                  | no       | false   | boolean   | Determins if Gatsby's [Deferred Static Generation API](https://www.gatsbyjs.com/docs/reference/rendering-options/deferred-static-generation/) is used |
+| defer                  | no       | false   | boolean   | Determines if Gatsby's [Deferred Static Generation API](https://www.gatsbyjs.com/docs/reference/rendering-options/deferred-static-generation/) is used |
 
