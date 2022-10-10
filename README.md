@@ -1,5 +1,7 @@
 # doctornpm
 
+> **Warning**: The source for this has been moved to the [`npm/documentation`](https://github.com/npm/documentation/tree/main/theme) repo.
+
 Did somebody call a doctor?  doctornpm is a friendly fork of the
 [doctocat](https://github.com/primer/doctocat) Gatsby theme from
 GitHub's design systems team for [the npm
